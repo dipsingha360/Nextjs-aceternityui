@@ -37,19 +37,8 @@ const FeaturedCourses = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
           {featuredCourses.map((course: Course) => (
             <div className="flex justify-center" key={course.id}>
-              <BackgroundGradient className="flex flex-col gap-3 rounded-[22px] bg-white dark:bg-zinc-900 overflow-hidden h-full max-w-sm p-4 text-center">
-                <p className="ext-lg sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
-                  {course.title}
-                </p>
-                <p className="text-sm text-neutral-600 dark:text-neutral-400 flex-grow">
-                  {course.description}
-                </p>
-                <Link
-                  className="bg-slate-800 rounded-lg py-2 text-slate-50 font-semibold"
-                  href={`/courses/${course.slug}`}
-                >
-                  Details
-                </Link>
+              <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
+                <p>{course.title}</p>
               </BackgroundGradient>
             </div>
           ))}
